@@ -4,15 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Belajar Tailwind CSS via CDN</title>
+  <title>Belajar Tailwind CSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
+          spacing: {
+            13: '3.25rem',
+          },
+          fontFamily: {
+            inter: ['Inter']
+          },
           colors: {
-            rama: 'green',
+            rama: "#bada55",
+            kopi: "#c0ffee"
           },
           animation: {
             'spin-slow': 'spin 3s linear infinite',
@@ -34,12 +44,76 @@
   </script>
   <style type="text/tailwindcss">
     #toggle:checked ~ label div.toggle-circle{
-      @apply translate-x-3;
-    }
-  </style>
+        @apply translate-x-3;
+      }
+    </style>
 </head>
 
 <body class="dark:bg-slate-700 dark:text-slate-200">
+  <h1 class="text-8xl font-bold text-center my-10">Mari Belajar <span
+      class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text  text-transparent">Tailwind
+      CSS</span></h1>
+
+  <section class="mb-10 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-200">
+    <h2 class="text-3xl text-center">Spacing</h2>
+    <div class="m-13">Margin</div>
+    <div class="p-8">Padding</div>
+  </section>
+
+  <section class="mb-10 bg-green-200">
+    <h2 class="text-3xl text-center">Sizing</h2>
+    <div class="w-32 h-32 bg-kopi">Kotak 1</div>
+  </section>
+
+  <section class="font-inter max-w-3xl mx-auto">
+    <h2 class="mb-4 text-4xl font-bold">Belajar Mengenai Typography pada TailwindCSS</h2>
+    <div class="mb-4 text-lg text-gray-500">By <a href="#" class="text-gray-700 font-semibold">Rama Novaris Ayyubi
+        Pratama</a>, 1
+      Januari 2022</div>
+    <p class="mb-4">Lorem ipsum dolor sit amet <a href="#" class="text-blue-600 underline font-semibold">consectetur</a>
+      adipisicing
+      elit. Non
+      nostrum ad vitae at esse
+      vel quasi qui
+      dignissimos
+      eligendi quaerat accusamus consequatur debitis totam, dolores perspiciatis, fugiat dolorem quia molestias
+      distinctio, fugit numquam molestiae assumenda maiores. Assumenda dolor odit sit molestiae. Expedita ullam eligendi
+      sapiente, dolor sit maiores at repellat.</p>
+    <blockquote class="mb-4 italic font-thin text-xl">"Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+      Delectus
+      similique
+      recusandae id,
+      voluptate nobis
+      deleniti molestias
+      enim?"</blockquote>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in, quos illum ex, neque sit vel consequuntur
+      distinctio sed numquam incidunt, excepturi fuga facilis? Mollitia dolore omnis voluptate iure inventore.</p>
+  </section>
+
+  <div class="max-w-xl bg-[#bada55] h-96 mx-auto mt-[42px] overflow-y-scroll bg-fixed"
+    style="background-image: url('https://source.unsplash.com/1000x600?computer');">
+    <p class="p-5 text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident accusamus perspiciatis
+      quod numquam, veniam
+      officiis totam, ratione illo dicta sed odio repudiandae facere suscipit temporibus! Non sequi atque iusto aliquid.
+      Voluptates, quod animi quia, quibusdam quas dolores, nulla officiis id nesciunt totam laborum optio omnis nisi
+      autem incidunt placeat at ad! Enim inventore nulla molestias, veritatis necessitatibus hic possimus minima amet,
+      ex reprehenderit error aspernatur, consequuntur repudiandae deleniti. Minima adipisci quia repudiandae debitis
+      illum assumenda eveniet nisi molestias fugiat quas veritatis officia accusantium numquam, quaerat voluptate ullam
+      cum aut culpa vero saepe, suscipit temporibus. Quaerat mollitia laboriosam ut iste cum optio porro inventore ea
+      voluptatem molestiae debitis nisi sed dolorum similique veritatis voluptates, obcaecati necessitatibus quis
+      impedit voluptatum velit? Dolorem, quo, sequi temporibus omnis aperiam voluptatem odit quam placeat minima
+      reiciendis maiores officia. Quis amet provident cum dolor. Nisi ratione dolores eum corrupti eveniet voluptates
+      nulla deserunt ipsa odit sint ex aspernatur, ea pariatur commodi quae libero tempora repudiandae rem sed! Eligendi
+      minus placeat expedita adipisci possimus obcaecati, nihil explicabo fugiat nesciunt rem quis quam id consequuntur
+      temporibus, suscipit aliquid amet voluptates totam maxime harum, reprehenderit magni dolor modi. Vel est excepturi
+      necessitatibus ipsa dicta dolorem amet omnis modi inventore.</p>
+  </div>
+
+  <div
+    class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 overflow-hidden border-8 flex"
+    style="background-image: url(./img/laptop.jpg);">
+    <div class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-md rounded-full"></div>
+  </div>
 
   <div class="flex justify-center">
     <span class="text-slate-500 text-sm mr-2">Light</span>
