@@ -13,6 +13,20 @@
         extend: {
           colors: {
             rama: 'green',
+          },
+          animation: {
+            'spin-slow': 'spin 3s linear infinite',
+            goyang: 'gerak 1s ease-in-out infinite'
+          },
+          keyframes: {
+            gerak: {
+              '0%, 100%': {
+                transform: 'rotate(-3deg)'
+              },
+              '50%': {
+                transform: 'rotate(3deg)'
+              }
+            }
           }
         }
       }
@@ -64,6 +78,21 @@
         <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
       </label>
     </form>
+  </div>
+
+  <hr class="my-20">
+
+  <div
+    class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:scale-125 hover:rotate-45 transition hover:bg-pink-500 hover:origin-top-left">
+  </div>
+
+  <div class="w-40 h-40 mx-auto rounded-lg mt-20 group">
+    <div
+      class="w-full h-full bg-blue-500 shadow-lg rounded-lg group-hover:rotate-180 origin-top-left transition duration-1000 delay-1000">
+    </div>
+  </div>
+
+  <div class="w-40 h-40 bg-pink-500 mx-auto shadow-lg mt-20 animate-goyang rounded-lg">
   </div>
 
   <div class="mb-96"></div>
